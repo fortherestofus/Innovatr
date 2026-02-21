@@ -43,7 +43,7 @@ const ConsultTools = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-32 bg-brand-purple overflow-hidden z-20">
+    <section ref={sectionRef} className="relative py-32 bg-brand-purple dark:bg-indigo-950 transition-colors duration-500 overflow-hidden z-20">
       
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
         
@@ -55,7 +55,7 @@ const ConsultTools = () => {
           Our proprietary toolkit accelerates every phase of research — from hypothesis to action.
         </p>
         
-        <a href="#" className="inline-block text-white underline decoration-white/50 hover:decoration-white transition-colors mb-20">
+        <a href="#" className="inline-block text-white underline decoration-white/50 hover:decoration-white transition-colors mb-20 text-sm font-bold uppercase tracking-widest">
           See how we Test Ideas in 24hrs
         </a>
 
@@ -65,12 +65,12 @@ const ConsultTools = () => {
             <div 
               key={tool.id} 
               ref={el => cardsRef.current[index] = el}
-              className="clay-surface bg-white rounded-[2rem] p-4 flex flex-col group cursor-pointer hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
+              className="clay-surface bg-white dark:bg-brand-dark rounded-[2rem] p-4 flex flex-col group cursor-pointer hover:-translate-y-2 hover:shadow-2xl dark:hover:shadow-brand-blue/20 transition-all duration-300 border border-transparent dark:border-white/5"
             >
               
               {/* Image Area placeholder */}
-              <div className="bg-brand-surfaceAlt rounded-[1.5rem] w-full aspect-square relative mb-4 overflow-hidden border border-slate-100 flex items-center justify-center">
-                <div className="absolute top-4 right-4 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10 shadow-sm text-slate-500 hover:text-brand-dark">
+              <div className="bg-brand-surfaceAlt dark:bg-slate-800 rounded-[1.5rem] w-full aspect-square relative mb-4 overflow-hidden border border-slate-100 dark:border-white/5 flex items-center justify-center transition-colors">
+                <div className="absolute top-4 right-4 w-8 h-8 bg-white/80 dark:bg-brand-dark/80 backdrop-blur rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10 shadow-sm text-slate-500 dark:text-white/60 hover:text-brand-dark dark:hover:text-white">
                   <Maximize2 size={14} />
                 </div>
                 {tool.comingSoon && (
@@ -79,14 +79,14 @@ const ConsultTools = () => {
                   </div>
                 )}
                 {/* Abstract graphic representation of tool mapping */}
-                <div className="w-[80%] h-[80%] bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center opacity-50 group-hover:scale-105 transition-transform duration-500">
-                  <span className="text-slate-300 font-mono text-xs">UI Preview</span>
+                <div className="w-[80%] h-[80%] bg-white dark:bg-brand-dark rounded-xl shadow-sm border border-slate-100 dark:border-white/5 flex items-center justify-center opacity-50 dark:opacity-30 group-hover:scale-105 transition-all duration-500">
+                  <span className="text-slate-300 dark:text-white/40 font-mono text-xs">UI Preview</span>
                 </div>
               </div>
 
               {/* Label Area */}
               <div className="flex items-center justify-between px-2 pb-2">
-                <h3 className="font-bold text-brand-dark text-[15px] font-sans text-left leading-tight pr-4">
+                <h3 className="font-bold text-brand-dark dark:text-white text-[15px] font-sans text-left leading-tight pr-4 transition-colors">
                   {tool.name}
                 </h3>
                 <div className="w-10 h-10 rounded-full bg-brand-lightBlue text-white flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-md">

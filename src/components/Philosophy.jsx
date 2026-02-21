@@ -60,7 +60,7 @@ const Philosophy = () => {
   ];
   
   return (
-    <section ref={sectionRef} className="relative py-40 bg-brand-dark overflow-hidden z-10">
+    <section ref={sectionRef} className="relative py-40 bg-brand-dark dark:bg-slate-950 transition-colors duration-500 overflow-hidden z-10">
       
       {/* Background Parallax Texture */}
       <div className="philo-bg absolute inset-0 opacity-20 pointer-events-none" style={{ top: '-20%', height: '140%' }}>
@@ -94,8 +94,8 @@ const Philosophy = () => {
               </h3>
             </div>
             
-            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-brand-dark to-transparent z-10"></div>
-            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-brand-dark to-transparent z-10"></div>
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-brand-dark dark:from-slate-950 to-transparent z-10 transition-colors duration-500"></div>
+            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-brand-dark dark:from-slate-950 to-transparent z-10 transition-colors duration-500"></div>
             
             <div className="flex overflow-hidden group">
               <div className="flex animate-marquee whitespace-nowrap py-12 gap-24">

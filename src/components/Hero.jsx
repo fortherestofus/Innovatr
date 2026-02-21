@@ -117,22 +117,22 @@ const Hero = () => {
   const headingText = "Built for the Speed of CPG Innovation";
 
   return (
-    <section ref={containerRef} className="relative pt-32 pb-40 overflow-hidden bg-[#FAF9F6] z-20">
+    <section ref={containerRef} className="relative pt-32 pb-40 overflow-hidden bg-[#FAF9F6] dark:bg-brand-dark/95 transition-colors duration-500 z-20">
       <div className="max-w-7xl mx-auto px-6 w-full relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center mb-32 lg:mb-48">
         
         {/* Text Content */}
         <div className="max-w-2xl">
-          <div className="hero-pill inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-purple/20 text-brand-dark font-mono text-xs font-bold mb-8 shadow-clay-sm border border-brand-purple/40">
+          <div className="hero-pill inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-purple/20 dark:bg-brand-purple/10 text-brand-dark dark:text-brand-purple font-mono text-xs font-bold mb-8 shadow-clay-sm border border-brand-purple/40">
             <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
             TRANSFORMING CONSUMER INSIGHTS
           </div>
           
-          <h1 className="text-6xl md:text-7xl lg:text-[5.5rem] leading-[1.05] font-display text-brand-dark mb-8 perspective-1000">
+          <h1 className="text-6xl md:text-7xl lg:text-[5.5rem] leading-[1.05] font-display text-brand-dark dark:text-white mb-8 perspective-1000">
             <div className="hero-title-line overflow-hidden pb-2">Ready to</div>
-            <div className="hero-title-line overflow-hidden text-brand-blue pb-2">Launch?</div>
+            <div className="hero-title-line overflow-hidden text-brand-blue dark:text-brand-orange pb-2">Launch?</div>
           </h1>
           
-          <p className="hero-sub text-xl md:text-2xl font-sans text-brand-dark/70 mb-10 max-w-lg leading-relaxed">
+          <p className="hero-sub text-xl md:text-2xl font-sans text-brand-dark/70 dark:text-white/60 mb-10 max-w-lg leading-relaxed">
             Agile, Idea-to-Market Consumer Insights. Launch better innovation through smart 24hr research.
           </p>
           
@@ -140,7 +140,7 @@ const Hero = () => {
             <button className="clay-btn-primary px-8 lg:px-10 py-4 lg:py-5 text-lg">
               Launch with Us
             </button>
-            <button className="clay-btn bg-white text-brand-dark border-2 border-slate-200/50 px-8 py-4 lg:py-5 text-lg">
+            <button className="clay-btn bg-white dark:bg-white/5 text-brand-dark dark:text-white border-2 border-slate-200/50 dark:border-white/10 px-8 py-4 lg:py-5 text-lg">
               Explore Tools
             </button>
           </div>
@@ -176,13 +176,13 @@ const Hero = () => {
         <div ref={featuresTextRef} className="flex flex-col items-center text-center">
           <div className="mb-12 flex justify-center mag-icon">
              {/* Small animated magnifying glass graphic */}
-             <div className="w-20 h-20 rounded-full bg-brand-lightBlue/10 flex items-center justify-center relative">
-               <div className="w-10 h-10 rounded-full border-4 border-brand-blue absolute -translate-x-1 -translate-y-1"></div>
-               <div className="w-5 h-1.5 bg-brand-blue absolute translate-x-4 translate-y-4 rotate-45 rounded-full"></div>
+             <div className="w-20 h-20 rounded-full bg-brand-lightBlue/10 dark:bg-brand-blue/20 flex items-center justify-center relative transition-colors duration-500">
+               <div className="w-10 h-10 rounded-full border-4 border-brand-blue dark:border-brand-orange absolute -translate-x-1 -translate-y-1"></div>
+               <div className="w-5 h-1.5 bg-brand-blue dark:bg-brand-orange absolute translate-x-4 translate-y-4 rotate-45 rounded-full"></div>
              </div>
           </div>
           
-          <h2 className="text-5xl md:text-7xl lg:text-[5rem] font-display text-brand-dark mb-12 leading-[1.1] perspective-1000">
+          <h2 className="text-5xl md:text-7xl lg:text-[5rem] font-display text-brand-dark dark:text-white mb-12 leading-[1.1] perspective-1000 transition-colors duration-500">
             {headingText.split(" ").map((word, i) => (
               <span key={i} className="inline-block overflow-hidden pb-2 mr-[0.25em]">
                 <span className="inline-block kinetic-word origin-bottom">{word}</span>
@@ -190,8 +190,8 @@ const Hero = () => {
             ))}
           </h2>
           
-          <p className="feature-para text-xl md:text-2xl text-brand-dark/70 font-sans leading-relaxed max-w-4xl mx-auto">
-            The Consumer Packaged Goods industry moves fast. Trends shift overnight, and launching the wrong product is a costly mistake. Innovatr's proprietary approach combines <span className="font-bold text-brand-blue">Strategy, Innovation & Testing</span>, and precise <span className="font-bold text-brand-blue">Execution</span> to deliver market-ready, actionable insights in just 24 hours. <br/><br/><span className="text-brand-dark font-display text-4xl">Stop guessing. Start launching.</span>
+          <p className="feature-para text-xl md:text-2xl text-brand-dark/70 dark:text-white/60 font-sans leading-relaxed max-w-4xl mx-auto transition-colors duration-500">
+            The Consumer Packaged Goods industry moves fast. Trends shift overnight, and launching the wrong product is a costly mistake. Innovatr's proprietary approach combines <span className="font-bold text-brand-blue dark:text-brand-orange">Strategy, Innovation & Testing</span>, and precise <span className="font-bold text-brand-blue dark:text-brand-orange font-bold">Execution</span> to deliver market-ready, actionable insights in just 24 hours. <br/><br/><span className="text-brand-dark dark:text-white font-display text-4xl">Stop guessing. Start launching.</span>
           </p>
         </div>
       </div>

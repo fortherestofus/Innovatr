@@ -27,7 +27,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-brand-dark pt-32 pb-12 rounded-t-[4rem] mt-[-4rem] z-30 overflow-hidden">
+    <footer className="relative bg-brand-dark dark:bg-black pt-32 pb-12 rounded-t-[4rem] mt-[-4rem] z-30 overflow-hidden transition-colors duration-500">
       
       {/* Massive Kinetic CTA */}
       <div className="w-full flex justify-center mb-32 group cursor-pointer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>

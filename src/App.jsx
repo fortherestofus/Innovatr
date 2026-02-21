@@ -55,7 +55,7 @@ function App() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-brand-surface selection:bg-brand-blue selection:text-white relative">
+    <div className="w-full min-h-screen bg-brand-surface dark:bg-brand-dark transition-colors duration-500 selection:bg-brand-blue selection:text-white relative">
       <Navbar />
       <Hero />
       <Philosophy />
