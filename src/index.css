@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-brand-dark bg-brand-surface selection:bg-brand-blue selection:text-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans font-bold tracking-tight;
+  }
+}
+
+/* Global Noise Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+}
+
+@layer components {
+  .clay-surface {
+    @apply bg-white border border-white/60 backdrop-blur-xl shadow-clay-base rounded-4xl transition-all duration-300;
+  }
+
+  .clay-surface-sm {
+    @apply bg-white/90 border border-white/50 backdrop-blur-md shadow-clay-sm rounded-3xl transition-all duration-300;
+  }
+
+  .clay-btn {
+    @apply relative overflow-hidden inline-flex items-center justify-center font-bold px-8 py-4 rounded-full transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] active:scale-95 hover:scale-[1.03] shadow-clay-button hover:shadow-clay-button-active;
+  }
+
+  .clay-btn-primary {
+    @apply clay-btn bg-brand-blue text-white border-2 border-brand-lightBlue/30;
+  }
+
+  .clay-btn-accent {
+    @apply clay-btn bg-brand-orange text-white border-2 border-orange-300/30;
+  }
+}
+
+/* Hide scrollbar for clean aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
