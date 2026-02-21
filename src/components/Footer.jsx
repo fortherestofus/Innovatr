@@ -77,7 +77,7 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto px-6 mt-20 flex flex-col md:flex-row items-center justify-between text-white/40 text-xs font-mono">
         <p>&copy; {new Date().getFullYear()} Innovatr Inc. All rights reserved.</p>
-        <p className="mt-4 md:mt-0">Designed via Clay World Architecture</p>
+        <p className="mt-4 md:mt-0">Website redesign concept | Designed and vibe coded by Alroy Ndhlovu for Innovatr</p>
       </div>
 
     </footer>
